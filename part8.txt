@@ -1,0 +1,5 @@
+The pin is 5278. This has been confirmed using the input:
+
+101 AND EXISTS(SELECT pin FROM pins WHERE cc_number=9999888877776666 AND pin=5278)
+
+The above line returned that the account selected with it is valid. To deduce the pin, > and < were used to narrow down the guesses.
