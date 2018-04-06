@@ -1,0 +1,4 @@
+This exploit works by hiding a URL pointing to a malicious request in an email. The image is made small so that the user would not see it. If the user is authenticated into a Banking site, this request can piggyback on the already-authenticated connection.
+
+
+<img src="attack?Screen=2078372&menu=900&transferFunds=5000" width="1" height="1">
